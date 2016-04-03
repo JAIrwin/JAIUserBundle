@@ -1,0 +1,14 @@
+{% extends 'JAIUserBundle::base.html.twig' %}
+
+{% block user %}
+    <div class="page-header">
+        <h1>Login</h1>
+    </div>
+	{% if notice %}
+	    <div>{{ notice }}</div>
+	{% endif %}
+	{{ form_start(form) }}
+	{{ form_widget(form) }}
+	{{ form_end(form) }}
+	<a href="{{ path('jai_user_forgot') }}">Forgot Password?</a>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'JAIUserBundle::base.html.twig' %}
+
+{% block user %}
+    <div class="page-header">
+        <h1>Register</h1>
+    </div>
+	{{ form_start(form) }}
+	{{ form_widget(form) }}
+	{{ form_end(form) }}
+{% endblock %}

@@ -1,0 +1,51 @@
+/app/config/parameters.yml
+/build/
+/phpunit.xml
+/var/*
+!/var/cache
+/var/cache/*
+!var/cache/.gitkeep
+!/var/logs
+/var/logs/*
+!var/logs/.gitkeep
+!/var/sessions
+/var/sessions/*
+!var/sessions/.gitkeep
+!var/SymfonyRequirements.php
+/vendor/
+/web/bundles/
+
+# Assetic directories
+web/assetic/*
+web/js/*
+web/css/*
+
+# doctrine entities generation backup
+*.php~
+
+
+# OSX files that should be ignored
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r (or [^M] which is [control-v return] and will hopefully work although it looks strange in some editors)
+Icon[]
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk

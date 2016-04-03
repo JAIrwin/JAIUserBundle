@@ -1,0 +1,39 @@
+jai_user_register:
+    path:     /register
+    defaults: { _controller: JAIUserBundle:Registration:register }
+
+jai_user_activate:
+    path:     /activate
+    defaults: { _controller: JAIUserBundle:Activate:activate }
+    
+jai_user_login:
+    path:     /login
+    defaults: { _controller: JAIUserBundle:Login:login }
+
+jai_user_profile:
+    path:     /user/profile
+    defaults: { _controller: JAIUserBundle:Profile:profile }
+
+jai_user_forgot:
+    path:     /forgot
+    defaults: { _controller: JAIUserBundle:Forgot:forgot }
+
+jai_user_reset:
+    path:     /reset
+    defaults: { _controller: JAIUserBundle:Reset:reset }
+
+jai_user_admin:
+    path:     /admin/user
+    defaults: { _controller: JAIUserBundle:Useradmin:useradmin }
+
+jai_user_admin_edit:
+    path:     /admin/user/{userid}
+    defaults: { _controller: JAIUserBundle:Useradmin:useredit }
+
+jai_user_admin_role_add:
+    path:     /admin/user/{userid}/add_role/{role}
+    defaults: { _controller: JAIUserBundle:Useradmin:addRole }
+
+jai_user_admin_role_remove:
+    path:     /admin/user/{userid}/remove_role/{role}
+    defaults: { _controller: JAIUserBundle:Useradmin:removeRole }

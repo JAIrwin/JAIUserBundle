@@ -1,0 +1,30 @@
+{
+    "name": "jairwin/user-bundle",
+    "type": "symfony-bundle",
+    "description": "This bundle provides user management services.",
+    "keywords": [
+    	"user management",
+    	"user registration",
+    	"user activation",
+    	"user login",
+    	"user profile",
+    	"user role assignment"
+    ],
+    "homepage": "https://github.com/JAIrwin/JAIUserBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Irwin",
+            "email": "developer@jairwin.com",
+            "homepage": "http://jairwin.com"
+        }
+    ],
+    "require": {
+        "excelwebzone/recaptcha-bundle": "^1.4",
+        "doctrine/doctrine-fixtures-bundle": "^2.3",
+        "doctrine/doctrine-migrations-bundle": "^1.1"
+    },
+    "autoload": {
+        "psr-4": { "JAI\\Bundle\\UserBundle\\": "" }
+    }
+}

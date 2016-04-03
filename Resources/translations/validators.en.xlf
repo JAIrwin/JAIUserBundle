@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+<!-- Security -->
+            <trans-unit id="security_mismatched_passwords">
+                <source>security.mismatched.passwords</source>
+                <target>The password fields must match</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

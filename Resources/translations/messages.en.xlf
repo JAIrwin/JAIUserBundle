@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="email_label">
+                <source>Email</source>
+                <target>Email</target>
+            </trans-unit>
+            <trans-unit id="email_placeholder">
+                <source>email.placeholder</source>
+                <target>example@domain.tld</target>
+            </trans-unit>
+            <trans-unit id="security_register_button">
+                <source>security.register.button</source>
+                <target>Create Account</target>
+            </trans-unit>
+            <trans-unit id="security_remember_me">
+                <source>security.remember.me</source>
+                <target>Remember Me</target>
+            </trans-unit>
+            <trans-unit id="security_login_button">
+                <source>security.login.button</source>
+                <target>Log In</target>
+            </trans-unit>
+            <trans-unit id="security_username">
+                <source>security.username</source>
+                <target>Username</target>
+            </trans-unit>
+            <trans-unit id="security_username_placeholder">
+                <source>security.username.placeholder</source>
+                <target>User Name</target>
+            </trans-unit>
+            <trans-unit id="security_usernameoremail_placeholder">
+                <source>security.usernameoremail.placeholder</source>
+                <target>Your User Name or Email</target>
+            </trans-unit>
+            <trans-unit id="security_password">
+                <source>security.password</source>
+                <target>Password</target>
+            </trans-unit>
+            <trans-unit id="security_repeat_password">
+                <source>security.repeat.password</source>
+                <target>Repeat Password</target>
+            </trans-unit>
+            <trans-unit id="security_change_password">
+                <source>security.change.password</source>
+                <target>New Password</target>
+            </trans-unit>
+            <trans-unit id="security_change_repeat_password">
+                <source>security.change.repeat.password</source>
+                <target>Repeat New Password</target>
+            </trans-unit>
+            <trans-unit id="security_newpw_placeholder">
+                <source>security.newpw.placeholder</source>
+                <target>New Password (If Changing)</target>
+            </trans-unit>
+            <trans-unit id="security_newrepeat_placeholder">
+                <source>security.newrepeat.placeholder</source>
+                <target>Repeat New Password (If Changing)</target>
+            </trans-unit>
+            <trans-unit id="security_current_password">
+                <source>security.current.password</source>
+                <target>Current Password</target>
+            </trans-unit>
+            <trans-unit id="security_reset_password">
+                <source>security.reset.password</source>
+                <target>Reset Password</target>
+            </trans-unit>
+            <trans-unit id="security_roles">
+                <source>security.roles</source>
+                <target>Roles</target>
+            </trans-unit>
+            <trans-unit id="security_active">
+                <source>security.active</source>
+                <target>Active?</target>
+            </trans-unit>
+            <trans-unit id="security_update_user_info">
+                <source>security.update.user.info</source>
+                <target>Update User Profile</target>
+            </trans-unit>
+            <trans-unit id="security_send_activate">
+                <source>security.send.activate</source>
+                <target>Send Activation</target>
+            </trans-unit>
+            <trans-unit id="security_send_reset">
+                <source>security.send.reset</source>
+                <target>Send Password Reset</target>
+            </trans-unit>
+            <trans-unit id="security_activation_subject">
+                <source>security.activation.subject</source>
+                <target>Activate registration for </target>
+            </trans-unit>
+            <trans-unit id="security_password_subject">
+                <source>security.password.subject</source>
+                <target>Password Reset for </target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
