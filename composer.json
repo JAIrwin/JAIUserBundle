@@ -1,7 +1,7 @@
 {
     "name": "jairwin/user-bundle",
     "type": "symfony-bundle",
-    "description": "This bundle provides user management services.",
+    "description": "This bundle provides user management and forms for Symfony 3 projects.",
     "keywords": [
     	"user management",
     	"user registration",
