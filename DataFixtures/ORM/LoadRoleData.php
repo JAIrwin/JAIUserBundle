@@ -1,11 +1,11 @@
 <?php
 // src/AppBundle/DataFixtures/ORM/LoadRoleData.php
 
-namespace JAI\UserBundle\DataFixtures\ORM;
+namespace JAI\Bundle\UserBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use JAI\UserBundle\Entity\Role;
+use JAI\Bundle\UserBundle\Entity\Role;
 
 class LoadRoleData implements FixtureInterface
 {

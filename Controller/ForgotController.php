@@ -1,9 +1,9 @@
 <?php
-// src/JAI\UserBundle/Controller/ForgotController.php
-namespace JAI\UserBundle\Controller;
+// src/JAI\Bundle\UserBundle/Controller/ForgotController.php
+namespace JAI\Bundle\UserBundle\Controller;
 
-use JAI\UserBundle\Form\Security\ForgotType;
-use JAI\UserBundle\Entity\User;
+use JAI\Bundle\UserBundle\Form\Security\ForgotType;
+use JAI\Bundle\UserBundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;

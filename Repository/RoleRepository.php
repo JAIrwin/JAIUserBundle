@@ -1,6 +1,6 @@
 <?php
 
-namespace JAI\UserBundle\Repository;
+namespace JAI\Bundle\UserBundle\Repository;
 
 /**
  * RoleRepository

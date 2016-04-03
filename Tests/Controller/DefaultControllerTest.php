@@ -1,6 +1,6 @@
 <?php
 
-namespace JAI\UserBundle\Tests\Controller;
+namespace JAI\Bundle\UserBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

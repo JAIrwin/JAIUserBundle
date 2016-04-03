@@ -1,6 +1,6 @@
 <?php
 
-namespace JAI\UserBundle;
+namespace JAI\Bundle\UserBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

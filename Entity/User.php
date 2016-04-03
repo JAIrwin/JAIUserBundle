@@ -1,6 +1,6 @@
 <?php
 // src/JAI/UserBundle/Entity/User.php
-namespace JAI\UserBundle\Entity;
+namespace JAI\Bundle\UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -13,7 +13,7 @@ use EWZ\Bundle\RecaptchaBundle\Validator\Constraints as Recaptcha;
 
 /**
  * @ORM\Table(name="app_users")
- * @ORM\Entity(repositoryClass="JAI\UserBundle\Repository\UserRepository")
+ * @ORM\Entity(repositoryClass="JAI\Bundle\UserBundle\Repository\UserRepository")
  * @UniqueEntity(fields="email", message="Email already taken",groups={"registration","profile"})
  * @UniqueEntity(fields="username", message="Username already taken",groups={"registration","profile"})
  */
@@ -88,7 +88,7 @@ class User implements AdvancedUserInterface, \Serializable
 	public $recaptcha;
 
 	/**
-	 * @ORM\ManyToMany(targetEntity="JAI\UserBundle\Entity\Role", inversedBy="users")
+	 * @ORM\ManyToMany(targetEntity="JAI\Bundle\UserBundle\Entity\Role", inversedBy="users")
 	 */
 	private $roles;
 
@@ -265,11 +265,11 @@ class User implements AdvancedUserInterface, \Serializable
 	/**
 	 * Add role
 	 *
-	 * @param \JAI\UserBundle\Entity\Role $role
+	 * @param \JAI\Bundle\UserBundle\Entity\Role $role
 	 *
 	 * @return User
 	 */
-	public function addRole(\JAI\UserBundle\Entity\Role $role)
+	public function addRole(\JAI\Bundle\UserBundle\Entity\Role $role)
 	{
 		$this->roles[] = $role;
 
@@ -279,9 +279,9 @@ class User implements AdvancedUserInterface, \Serializable
 	/**
 	 * Remove role
 	 *
-	 * @param \JAI\UserBundle\Entity\Role $role
+	 * @param \JAI\Bundle\UserBundle\Entity\Role $role
 	 */
-	public function removeRole(\JAI\UserBundle\Entity\Role $role)
+	public function removeRole(\JAI\Bundle\UserBundle\Entity\Role $role)
 	{
 		$this->roles->removeElement($role);
 	}

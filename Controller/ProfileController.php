@@ -1,9 +1,9 @@
 <?php
-// src/JAI\UserBundle/Controller/ProfileController.php
-namespace JAI\UserBundle\Controller;
+// src/JAI\Bundle\UserBundle/Controller/ProfileController.php
+namespace JAI\Bundle\UserBundle\Controller;
 
-use JAI\UserBundle\Form\Security\ProfileType;
-use JAI\UserBundle\Entity\User;
+use JAI\Bundle\UserBundle\Form\Security\ProfileType;
+use JAI\Bundle\UserBundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;

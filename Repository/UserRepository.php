@@ -1,6 +1,6 @@
 <?php
 
-namespace JAI\UserBundle\Repository;
+namespace JAI\Bundle\UserBundle\Repository;
 
 use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;

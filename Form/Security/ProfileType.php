@@ -1,6 +1,6 @@
 <?php
 // src/JAI/UserBundle/Form/Security/ProfileType.php
-namespace JAI\UserBundle\Form\Security;
+namespace JAI\Bundle\UserBundle\Form\Security;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -47,7 +47,7 @@ class ProfileType extends AbstractType
 	public function configureOptions(OptionsResolver $resolver)
 	{
 		$resolver->setDefaults(array(
-				'data_class' => 'JAI\UserBundle\Entity\User',
+				'data_class' => 'JAI\Bundle\UserBundle\Entity\User',
 				'validation_groups' => array('profile'),
 			));
 	}

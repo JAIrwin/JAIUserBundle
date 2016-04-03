@@ -1,6 +1,6 @@
 <?php
 
-namespace JAI\UserBundle\Entity;
+namespace JAI\Bundle\UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -9,7 +9,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * Role
  *
  * @ORM\Table(name="role")
- * @ORM\Entity(repositoryClass="JAI\UserBundle\Repository\RoleRepository")
+ * @ORM\Entity(repositoryClass="JAI\Bundle\UserBundle\Repository\RoleRepository")
  */
 class Role
 {
@@ -30,7 +30,7 @@ class Role
     private $role;
     
 	/**
-	 * @ORM\ManyToMany(targetEntity="JAI\UserBundle\Entity\User",mappedBy="roles")
+	 * @ORM\ManyToMany(targetEntity="JAI\Bundle\UserBundle\Entity\User",mappedBy="roles")
 	 */
     private $users;
     
@@ -76,11 +76,11 @@ class Role
     /**
      * Add user
      *
-     * @param \JAI\UserBundle\Entity\User $user
+     * @param \JAI\Bundle\UserBundle\Entity\User $user
      *
      * @return Role
      */
-    public function addUser(\JAI\UserBundle\Entity\User $user)
+    public function addUser(\JAI\Bundle\UserBundle\Entity\User $user)
     {
         $this->users[] = $user;
 
@@ -90,9 +90,9 @@ class Role
     /**
      * Remove user
      *
-     * @param \JAI\UserBundle\Entity\User $user
+     * @param \JAI\Bundle\UserBundle\Entity\User $user
      */
-    public function removeUser(\JAI\UserBundle\Entity\User $user)
+    public function removeUser(\JAI\Bundle\UserBundle\Entity\User $user)
     {
         $this->users->removeElement($user);
     }

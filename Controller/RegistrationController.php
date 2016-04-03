@@ -1,10 +1,10 @@
 <?php
-// src/JAI\UserBundle/Controller/RegistrationController.php
-namespace JAI\UserBundle\Controller;
+// src/JAI\Bundle\UserBundle/Controller/RegistrationController.php
+namespace JAI\Bundle\UserBundle\Controller;
 
-use JAI\UserBundle\Form\Security\RegisterType;
-use JAI\UserBundle\Entity\User;
-use JAI\UserBundle\Entity\Role;
+use JAI\Bundle\UserBundle\Form\Security\RegisterType;
+use JAI\Bundle\UserBundle\Entity\User;
+use JAI\Bundle\UserBundle\Entity\Role;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;

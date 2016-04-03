@@ -1,9 +1,9 @@
 <?php
-// src/JAI\UserBundle/Controller/LoginController.php
-namespace JAI\UserBundle\Controller;
+// src/JAI\Bundle\UserBundle/Controller/LoginController.php
+namespace JAI\Bundle\UserBundle\Controller;
 
-use JAI\UserBundle\Form\Security\LoginType;
-use JAI\UserBundle\Entity\User;
+use JAI\Bundle\UserBundle\Form\Security\LoginType;
+use JAI\Bundle\UserBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
