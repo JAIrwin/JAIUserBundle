@@ -190,14 +190,14 @@ $ php bin/console doctrine:fixtures:load
 At this point all of the routes should be working, so you can register a new user by
 going to `/register`. If email is configured correctly an activation email will be sent.
 Using the link in the activation email will land you on the login page with the message
-that your account is now active. Log in as your newly created user. Now go to `/admin/user`
-Click on the name of your new user and you will see the profile information displayed.
-Find the button under "Available Roles" named "ROLE_ADMIN" and click it. The selected
-user will update with the role ROLE_ADMIN.
+that your account is now active. Now go to `/admin/user` and Click on the name of your 
+new user and you will see the profile information displayed. Find the button under 
+"Available Roles" named "ROLE_ADMIN" and click it. The selected user will update with 
+the role ROLE_ADMIN.
 
 #Step 10: Secure the Admin Page
 
-Now that we have a user who can access the admin page we'll fix the admin firewall in
+Now that we have an admin user we'll fix the admin firewall in
 `app/config/security.yml`. Just un-comment it:
 
 ```yaml
@@ -209,6 +209,9 @@ Now that we have a user who can access the admin page we'll fix the admin firewa
         # require ROLE_USER for /user*
         - { path: ^/user, roles: ROLE_USER }
 ```
+
+Now you can only access `/admin/user` (actually `/admin/*` since you'll probably have 
+other Admin pages in your app) logged in as a user with the role ROLE_ADMIN.
 
 ##Using
 
