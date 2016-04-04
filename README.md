@@ -20,7 +20,8 @@ of the Composer documentation.
 
 #Step 2: Enable the Bundle
 
-Enable the bundle by adding it to the list of registered bundles in `app/AppKernel.php`:
+Enable the bundle and the depended bundles by adding them to the list of registered 
+bundles in `app/AppKernel.php`:
 
 ```php
 // app/AppKernel.php
@@ -33,7 +34,10 @@ class AppKernel extends Kernel
         $bundles = array(
             // ...
 
-            new JAI\UserBundle\JAIUserBundle(),
+			new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+			new EWZ\Bundle\RecaptchaBundle\EWZRecaptchaBundle(),
+            new JAI\Bundle\UserBundle\JAIUserBundle(),
         );
 
         // ...
@@ -54,6 +58,8 @@ To add the provided routes  update
 jai_user:
     resource: "@JAIUserBundle/Resources/config/routing.yml"
     prefix:   /
+logout:
+    path: /logout
 ```
 
 #Step 4: Configure ReCaptcha
@@ -128,7 +134,7 @@ Here is an example you can start with:
 
 security:
     encoders:
-        JAI\UserBundle\Entity\User:
+        JAI\Bundle\UserBundle\Entity\User:
             algorithm: bcrypt
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER
@@ -206,7 +212,7 @@ Now that we have a user who can access the admin page we'll fix the admin firewa
 
 ##Using
 
-This bundle provides the routes `/register`, `/activate`, `/login`, `/user/profile`, `/forgot`,
+This bundle provides the routes `/register`, `/activate`, `/login`, `/logout`, `/user/profile`, `/forgot`,
 `/reset`, and `/admin/user`. Their purposes should be self-explanatory. The forms use the
 Symfony Forms Component (documentation: [Forms from the Symfony Book](http://symfony.com/doc/current/book/forms.html)),
 so they will use the form themes (documentation: [Form Themes from the Symfony Book](https://symfony.com/doc/current/cookbook/form/form_customization.html#cookbook-form-customization-form-themes)).
