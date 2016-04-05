@@ -8,7 +8,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * Role
  *
- * @ORM\Table(name="role")
+ * @ORM\Table(name="JAI_UserBundle_role")
  * @ORM\Entity(repositoryClass="JAI\Bundle\UserBundle\Repository\RoleRepository")
  */
 class Role

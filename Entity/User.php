@@ -12,7 +12,7 @@ use EWZ\Bundle\RecaptchaBundle\Validator\Constraints as Recaptcha;
 
 
 /**
- * @ORM\Table(name="app_users")
+ * @ORM\Table(name="JAI_UserBundle_user")
  * @ORM\Entity(repositoryClass="JAI\Bundle\UserBundle\Repository\UserRepository")
  * @UniqueEntity(fields="email", message="Email already taken",groups={"registration","profile"})
  * @UniqueEntity(fields="username", message="Username already taken",groups={"registration","profile"})
@@ -89,6 +89,7 @@ class User implements AdvancedUserInterface, \Serializable
 
 	/**
 	 * @ORM\ManyToMany(targetEntity="JAI\Bundle\UserBundle\Entity\Role", inversedBy="users")
+	 * @ORM\JoinTable(name="JAI_UserBundle_user_role")
 	 */
 	private $roles;
 
