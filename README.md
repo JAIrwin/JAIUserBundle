@@ -240,7 +240,7 @@ Some upgrades will include database schema changes. After updating you may need 
 $ php bin/console doctrine:migrations:diff
 $ php bin/console doctrine:migrations:migrate
 ```
-**Always backup your database first!** For example, v1.1.0 renamed the tables to avoid possible conflicts. Doctrine diffs this as DROP old\_table\_name, ADD new\_table\_name. In this case, reading the diff would tell you what will happen and you'd need to perform the migration manually.
+**Always backup your database first!** For example, v1.1.0 renamed the tables to avoid possible conflicts. Doctrine diffs this as DROP old\_table\_name, ADD new\_table\_name. In this case, reading the diff would tell you what will happen and you'd need to perform the migration manually to avoid losing data.
 
 ##To-Do
 
