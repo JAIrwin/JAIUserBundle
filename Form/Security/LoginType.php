@@ -21,7 +21,7 @@ class LoginType extends AbstractType
 		->add('password', PasswordType::class, [ 
 			'label' => 'security.password',
 			'attr' => [ 'placeholder' => 'security.password' ] ])
-		->add('remember', CheckboxType::class, [ 'label' => 'security.remember.me', 'mapped' => false ])
+		->add('remember', CheckboxType::class, [ 'label' => 'security.remember.me', 'mapped' => false, 'required' => false ])
 		->add('login', SubmitType::class, [ 'label' => 'security.login.button' ])
 		;
 	}
