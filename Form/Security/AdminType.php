@@ -22,7 +22,9 @@ class AdminType extends AbstractType
 		->add('username', TextType::class, [
 			'label' => 'security.username',
 			'attr' => [ 'placeholder' => 'security.username.placeholder' ] ])
-		->add('is_active', CheckboxType::class, [ 'label' => 'security.active' ])
+		->add('is_active', CheckboxType::class, [ 
+			'label' => 'security.active',
+			'required' => false ])
 		->add('update', SubmitType::class, [ 'label' => 'security.update.user.info' ])
 		->add('send_activate', SubmitType::class, [ 'label' => 'security.send.activate' ])
 		->add('send_reset', SubmitType::class, [ 'label' => 'security.send.reset' ])

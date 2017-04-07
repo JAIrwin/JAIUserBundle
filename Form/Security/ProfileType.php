@@ -25,6 +25,7 @@ class ProfileType extends AbstractType
 			'attr' => [ 'placeholder' => 'security.username.placeholder' ] ])
 		->add('plainPassword', RepeatedType::class, array(
 				'type' => PasswordType::class,
+				'required' => false,
 				'invalid_message' => 'security.mismatched.passwords',
 				'first_options'  => array(
 					'label' => 'security.change.password',
