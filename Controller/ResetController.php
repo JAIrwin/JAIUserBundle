@@ -57,7 +57,7 @@ class ResetController extends Controller
 			}
 		} else {
 			// Missing or invalid token - redirect to home
-			return $this->redirectToRoute('pageHome');
+			return $this->redirectToRoute('jai_user_forgot', ['message' => 'invalid_token']);
 		}
 	}
 }

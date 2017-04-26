@@ -27,6 +27,8 @@ class ForgotController extends Controller
 			$message = $request->query->get('message');
 			if ($message == 'expired_token') {
 				$info = "Your password reset token has expired. ";
+			} else if ($message == 'invalid_token') {
+				$info = "The password reset token is invalid. ";
 			}
 			$info .= "Enter the email you used to register and we will send instructions for resetting your password.";
 			$success = false;

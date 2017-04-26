@@ -119,7 +119,7 @@ class UseradminController extends Controller
 				$toEmail = $selected_user->getEmail();
 				$toName = $selected_user->getUsername();
 				$subject = $this->get('translator')->trans('security.password.subject');
-				$link = "/activate?token=".$token;
+				$link = "/reset?token=".$token;
 
 				$resetEmail = \Swift_Message::newInstance()
 				->setSubject($subject.$site_name)
