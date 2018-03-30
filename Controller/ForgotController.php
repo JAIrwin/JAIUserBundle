@@ -68,9 +68,8 @@ class ForgotController extends Controller
 			$toName = $foundUser->getUsername();
 			$subject = $this->get('translator')->trans('security.password.subject');
 			$link = "/reset?token=".$token;
-	
-			$resetEmail = \Swift_Message::newInstance()
-			->setSubject($subject.$site_name)
+			
+			$resetEmail = (new \Swift_Message($subject.$site_name))
 			->setFrom($from_email)
 			->setTo($toEmail)
 			->setBody(

@@ -55,9 +55,8 @@ class RegistrationController extends Controller
 		$toName = $user->getUsername();
 		$subject = $this->get('translator')->trans('security.activation.subject');
 		$link = "/activate?token=".$token;
-
-		$activateEmail = \Swift_Message::newInstance()
-		->setSubject($subject.$site_name)
+		
+		$activateEmail = (new \Swift_Message($subject.$site_name))
 		->setFrom($from_email)
 		->setTo($toEmail)
 		->setBody(
