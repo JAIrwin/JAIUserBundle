@@ -1,10 +1,10 @@
-#JAIUserBundle
+# JAIUserBundle
 
 This bundle provides user management and forms for Symfony3 Projects.
 
-##Installation
+## Installation
 
-###Step 1: Download the Bundle
+### Step 1: Download the Bundle
 
 Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
@@ -17,7 +17,7 @@ This command requires you to have Composer installed globally, as explained
 in the [installation chapter](https://getcomposer.org/doc/00-intro.md)
 of the Composer documentation.
 
-###Step 2: Enable the Bundle
+### Step 2: Enable the Bundle
 
 Enable the bundle and the depended bundles by adding them to the list of registered 
 bundles in `app/AppKernel.php`:
@@ -46,7 +46,7 @@ class AppKernel extends Kernel
 }
 ```
 
-###Step 3: Add Routing
+### Step 3: Add Routing
 
 To add the provided routes  update 
 `app/config/routing.yml`:
@@ -61,7 +61,7 @@ logout:
     path: /logout
 ```
 
-###Step 4: Configure ReCaptcha
+### Step 4: Configure ReCaptcha
 
 This bundle uses the EZWRecaptchaBundle which is configured in `app/config/config.yml`
 (documentation: [EWZRecaptcha on GitHub](https://github.com/excelwebzone/EWZRecaptchaBundle)):
@@ -75,7 +75,7 @@ ewz_recaptcha:
     locale_key:  %kernel.default_locale%
 ```
 
-###Step 5: Enable Translations
+### Step 5: Enable Translations
 
 To get the correct form labels and placeholders enable translation. In a new Symfony3
 project it needs to be uncommented in `app/config/config.yml`:
@@ -98,7 +98,7 @@ And set the locale in `app/config/parameters.yml`:
 Note - so far only english translations have been provided in this bundle. Most of
 the defaults are rather ugly.
 
-###Step 6: Configure Required parameters
+### Step 6: Configure Required parameters
 
 Make sure your database and mailer parameters are correct in `app/config/parameters.yml`.
 You will also need to add `site_name` and `from_email` parameters.
@@ -123,7 +123,7 @@ parameters:
     from_email:  greeter@yourdomain.tld
 ```
 
-###Step 7: Configure Security
+### Step 7: Configure Security
 
 Configure security to your needs (documentation: [Security from the Symfony Book](http://symfony.com/doc/current/book/security.html)).
 Here is an example you can start with:
@@ -175,7 +175,7 @@ security:
 For the moment we've disabled the firewall for the admin page, there's a reason for that.
 we'll fix it later.
 
-###Step 8: Initialize the Database
+### Step 8: Initialize the Database
 
 Update the database schema and load the initial roles from the console:
 
@@ -184,7 +184,7 @@ $ php bin/console doctrine:schema:update --force
 $ php bin/console doctrine:fixtures:load
 ```
 
-###Step 9: Create an Admin User
+### Step 9: Create an Admin User
 
 At this point all of the routes should be working, so you can register a new user by
 going to `/register`. If email is configured correctly an activation email will be sent.
@@ -194,7 +194,7 @@ new user and you will see the profile information displayed. Find the button und
 "Available Roles" named "ROLE_ADMIN" and click it. The selected user will update with 
 the role ROLE_ADMIN.
 
-###Step 10: Secure the Admin Page
+### Step 10: Secure the Admin Page
 
 Now that we have an admin user we'll fix the admin firewall in
 `app/config/security.yml`. Just un-comment it:
@@ -212,7 +212,7 @@ Now that we have an admin user we'll fix the admin firewall in
 Now you can only access `/admin/user` (actually `/admin/*` since you'll probably have 
 other Admin pages in your app) logged in as a user with the role ROLE_ADMIN.
 
-##Using
+## Using
 
 This bundle provides the routes `/register`, `/activate`, `/login`, `/logout`, `/user/profile`, `/forgot`,
 `/reset`, and `/admin/user`. Their purposes should be self-explanatory. The forms use the
@@ -232,7 +232,7 @@ To make the routes visually consistent with your own site start by overriding
 {% endblock %}
 ```
 
-##Upgrading
+## Upgrading
 
 Some upgrades will include database schema changes. After updating you may need to **backup your database** and run doctrine migrations:
 
@@ -242,24 +242,24 @@ $ php bin/console doctrine:migrations:migrate
 ```
 **Always backup your database first!** For example, v1.1.0 renamed the tables to avoid possible conflicts. Doctrine diffs this as DROP old\_table\_name, ADD new\_table\_name. In this case, reading the diff would tell you what will happen and you'd need the backup to restore your user, role, and user_role join table data to the renamed tables.
 
-##To-Do
+## To-Do
 
-###Unit Testing
+### Unit Testing
 
 Currently there aren't any unit tests, and that's just not right.
 
 
-###Remove Dependency on EWZRecaptchaBundle
+### Remove Dependency on EWZRecaptchaBundle
 
 It would be better if there was an optional setting like "use captcha" and then further 
 settings such as only requiring after a certain amount of flooding, and then specifics
 related to whatever captcha implementation is used in the current project.
 
-###User Admin Delete User
+### User Admin Delete User
 
 I don't know why I didn't notice this omission sooner.
 
-###User Admin Manage Roles
+### User Admin Manage Roles
 
 This is a little tricky because ideally you should be able to both add roles and
 change the heirarchy. Currently roles are in the database while the heirarchy is in
