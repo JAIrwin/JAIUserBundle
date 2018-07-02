@@ -33,9 +33,9 @@ class AppKernel extends Kernel
         $bundles = array(
             // ...
 
-			new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+            new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
-			new EWZ\Bundle\RecaptchaBundle\EWZRecaptchaBundle(),
+            new EWZ\Bundle\RecaptchaBundle\EWZRecaptchaBundle(),
             new JAI\Bundle\UserBundle\JAIUserBundle(),
         );
 
