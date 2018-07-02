@@ -253,16 +253,16 @@ Currently there aren't any unit tests, and that's just not right.
 
 ### Remove Dependency on EWZRecaptchaBundle
 
-It would be better if there was an optional setting like "use captcha" and then further 
-settings such as only requiring after a certain amount of flooding, and then specifics
-related to whatever captcha implementation is used in the current project.
+It would be better if there was an optional setting like "use captcha" and then further settings such as only requiring after a certain amount of flooding, and then specifics related to whatever captcha implementation is used in the current project.
 
-### User Admin Delete User
+### User Admin Features
 
-I don't know why I didn't notice this omission sooner.
+Delete user should be added to the admin page. Currently you can only delete a user by accessing the database directly.
+
+"Delete Inactive" - Specify a number of days since registration to show accounts that have not been activated. View should be a table of inactive users with a checkbox for each, and a "delete marked" button.
+
+Currently users are selected for editing from a drop-down list of user names. Need a "find user" feature to search by user name or email. This is especially needed for sites with a large number of users.
 
 ### User Admin Manage Roles
 
-This is a little tricky because ideally you should be able to both add roles and
-change the heirarchy. Currently roles are in the database while the heirarchy is in
-`app/config/security.yml`.
+This is a little tricky because ideally you should be able to both add roles and change the heirarchy. Currently roles are in the database while the heirarchy is in `app/config/security.yml`.
