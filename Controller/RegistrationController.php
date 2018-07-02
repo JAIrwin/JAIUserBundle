@@ -59,6 +59,7 @@ class RegistrationController extends Controller
 		$activateEmail = (new \Swift_Message($subject.$site_name))
 		->setFrom($from_email)
 		->setTo($toEmail)
+		// html version
 		->setBody(
 			$this->renderView(
 				'JAIUserBundle:Emails:activate.html.twig',
@@ -69,6 +70,18 @@ class RegistrationController extends Controller
 				)
 			),
 			'text/html'
+		)
+		// plaintext version of the message
+		->addPart(
+			$this->renderView(
+				'JAIUserBundle:Emails:activate.txt.twig',
+				array(
+					'to_name' => $toName,
+					'host_name' => $site_name,
+					'link' => $link
+				)
+			),
+			'text/plain'
 		);
 		$this->get('mailer')->send($activateEmail);
 		// redirect to login

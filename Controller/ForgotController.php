@@ -72,6 +72,7 @@ class ForgotController extends Controller
 			$resetEmail = (new \Swift_Message($subject.$site_name))
 			->setFrom($from_email)
 			->setTo($toEmail)
+			// html version
 			->setBody(
 				$this->renderView(
 					'JAIUserBundle:Emails:reset.html.twig',
@@ -82,6 +83,18 @@ class ForgotController extends Controller
 					)
 				),
 				'text/html'
+			)
+			// plaintext version of the message
+			->addPart(
+				$this->renderView(
+					'JAIUserBundle:Emails:reset.txt.twig',
+					array(
+						'to_name' => $toName,
+						'host_name' => $site_name,
+						'link' => $link
+					)
+				),
+				'text/plain'
 			);
 			$this->get('mailer')->send($resetEmail);
 		}

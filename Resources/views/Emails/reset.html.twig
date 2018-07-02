@@ -1,4 +1,6 @@
-<p>Hi {{ to_name }}</p>
-<p>We received a request to reset your email at {{ host_name }}.</p>
-<p>To reset your password, click <a href="{{ app.request.getSchemeAndHttpHost() ~ link }}">here</a></p>
-<p>If you ignore this message your password will not be changed.</p>
+<html>
+	<p>Hi {{ to_name }}</p>
+	<p>We received a request to reset your password at {{ host_name }}.</p>
+	<p>To reset your password, click <a href="{{ app.request.getSchemeAndHttpHost() ~ link }}">here</a></p>
+	<p>If you ignore this message your password will not be changed.</p>
+</html>
