@@ -75,6 +75,8 @@ ewz_recaptcha:
     locale_key:  %kernel.default_locale%
 ```
 
+For development you need to provide separate configuratons using the public test keys everywhere except production (documentation: [Google Recaptcha FAQ](https://developers.google.com/recaptcha/docs/faq)). You could either store the keys in `parameters.yml` or add the `ewz_recaptcha` configurations to `config_dev.yml`, `config_prod.yml`, and `config_test.yml` instead of `config.yml`.
+
 ### Step 5: Enable Translations
 
 To get the correct form labels and placeholders enable translation. In a new Symfony3
